@@ -370,9 +370,6 @@ main {
 /* How It Works Section */
 .how-it-works {
     margin-bottom: 60px;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
     position: relative;
     z-index: 1;
 }
@@ -418,9 +415,6 @@ main {
 /* Pointing System */
 .pointing-system {
     margin-bottom: 60px;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
     position: relative;
     z-index: 1;
 }
@@ -473,9 +467,6 @@ main {
 /* Charity Centers */
 .charity-centers {
     margin-bottom: 60px;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
     position: relative;
     z-index: 1;
 }

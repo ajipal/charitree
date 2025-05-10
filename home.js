@@ -94,11 +94,18 @@ function setupScrollTriggers() {
     // Get all sections that should be triggered by scroll
     const sections = document.querySelectorAll('.section-reveal');
     
+    // Initially set all sections to be invisible
+    sections.forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(50px)';
+        section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+    });
+    
     // Create a function to check if an element is in the viewport
     function isElementInViewport(el) {
         const rect = el.getBoundingClientRect();
         return (
-            rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.85 &&
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.9 &&
             rect.bottom >= 0
         );
     }
@@ -116,10 +123,10 @@ function setupScrollTriggers() {
     // Set up scroll event listener
     window.addEventListener('scroll', handleScroll);
     
-    // Trigger once on load to show visible sections
-    setTimeout(handleScroll, 100); // Small delay to ensure proper calculation
+    // Trigger once on page load to show visible sections
+    setTimeout(handleScroll, 300); // Increased delay to ensure proper calculation
     
-    // Check again after images might have loaded
+    // Check again after all content has loaded
     window.addEventListener('load', handleScroll);
 }
 
