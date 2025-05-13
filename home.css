@@ -4,7 +4,7 @@
     src: url('fonts/trebuc.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-    font-display: swap; /* For better performance */
+    font-display: swap;
 }
 
 /* Global Styles */
@@ -13,6 +13,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -110,8 +114,14 @@ body {
 .content-container {
     display: flex;
     flex-grow: 1;
-    height: calc(100vh - 71px); /* Subtract header height */
-    overflow: hidden; /* Prevent container overflow */
+    height: calc(100vh - 71px);
+    overflow: hidden;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* Sidebar Styles */
@@ -123,9 +133,9 @@ body {
     padding: 20px;
     border-right: 1px solid #ddd;
     position: sticky;
-    top: 71px; /* Height of the header */
+    top: 71px;
     height: calc(100vh - 71px);
-    overflow-y: auto; /* Allow scrolling if sidebar content is too tall */
+    overflow-y: auto;
     z-index: 10;
 }
 
@@ -209,19 +219,35 @@ body {
 
 .sidebar-navigation li {
     margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.sidebar-navigation li:hover {
+    background-color: rgba(76, 175, 80, 0.1);
+}
+
+.sidebar-navigation li.active {
+    background-color: rgba(76, 175, 80, 0.1);
+    border-left: 3px solid #4CAF50;
 }
 
 .sidebar-navigation a {
     text-decoration: none;
     color: #333;
     display: block;
-    padding: 8px 0;
+    padding: 8px 15px;
     font-size: 16px;
+    transition: all 0.3s ease;
 }
 
 .sidebar-navigation li.active a {
     color: #4CAF50;
     font-weight: bold;
+    padding-left: 12px;
+}
+
+.sidebar-navigation a:hover {
+    color: #4CAF50;
 }
 
 /* Main Content Wrapper */
@@ -278,8 +304,8 @@ main {
     flex-grow: 1;
     padding: 20px;
     background-color: transparent;
-    overflow-y: auto; /* Enable scrolling for main content */
-    height: calc(100vh - 71px); /* Subtract header height */
+    overflow-y: auto;
+    height: calc(100vh - 71px);
     position: relative;
     z-index: 1;
 }
@@ -316,7 +342,7 @@ main {
     line-height: 55px;
     color: white;
     display: block;
-    margin-left: 0; /* Remove left margin to align with orange text */
+    margin-left: 0;
     margin-top: 10px;
 }
 
@@ -329,10 +355,13 @@ main {
     font-weight: bold;
     cursor: pointer;
     font-size: 22.62px;
+    transition: all 0.3s ease;
 }
 
 .donate-now-button:hover {
     background-color: #59c75d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .hero-image {
@@ -399,6 +428,12 @@ main {
     border-radius: 10px;
     padding: 30px 20px;
     text-align: center;
+    transition: all 0.3s ease;
+}
+
+.process-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .process-card h3 {
@@ -444,6 +479,12 @@ main {
     background: linear-gradient(256deg, #49F62A -17.18%, rgba(0, 0, 0, 0.00) 72.67%), linear-gradient(77deg, #49F62A -25.3%, rgba(0, 0, 0, 0.00) 112.66%);
     padding: 30px 20px;
     text-align: center;
+    transition: all 0.3s ease;
+}
+
+.pointing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .pointing-card h3 {
@@ -516,6 +557,12 @@ main {
     max-width: 300px;
     width: 100%;
     height: 209px;
+    transition: all 0.3s ease;
+}
+
+.charity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .charity-card img {
@@ -548,6 +595,12 @@ main {
     justify-content: center;
     cursor: pointer;
     margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.pagination-button:hover {
+    background-color: #59c75d;
+    transform: scale(1.1);
 }
 
 .pagination-button svg {
@@ -603,6 +656,12 @@ footer {
 
 .social-link {
     color: #FF9900;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    color: #4CAF50;
+    transform: translateY(-2px);
 }
 
 /* Responsive styles */
@@ -644,5 +703,64 @@ footer {
     
     main {
         height: auto;
+    }
+    
+    .hero-title {
+        font-size: 48px;
+    }
+    
+    .hero-title .orange {
+        line-height: 55px;
+    }
+    
+    .hero-title .white {
+        font-size: 36px;
+        line-height: 45px;
+    }
+    
+    .donate-now-button {
+        padding: 12px 60px;
+        font-size: 18px;
+    }
+}
+
+/* Add to home.css */
+.hero {
+    min-height: 80vh;
+    padding: 40px 0;
+}
+
+.tree-counter {
+    margin: 40px 0;
+    padding: 20px 0;
+}
+
+.how-it-works,
+.pointing-system,
+.charity-centers {
+    padding: 60px 0;
+    margin: 0;
+}
+
+/* Ensure all content is visible */
+main {
+    overflow: visible;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: 30px 0;
+    }
+    .hero-title {
+        font-size: 36px;
+    }
+    .hero-title .orange {
+        line-height: 1.2;
+    }
+    .hero-title .white {
+        font-size: 24px;
+        line-height: 1.3;
     }
 }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ChariTree - Transparency</title>
+        <link rel="stylesheet" href="home.css">
+        <link rel="icon" href="image/Charitree Logo.svg" type="image/charitree-icon">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <meta name="description" content="Transparency reports for ChariTree donations">
+    </head>
+    <body>
+        <!--Main Header-->
+        <header class="main-header">
+            <div class="logo">
+                <a href="home.html">
+                    <img src="image/Charitree Logo.svg" alt="ChariTree Logo">
+                    <span>ChariTree</span>
+                </a>
+            </div>
+            <div class="search-bar">
+                <form action="/search" method="get">
+                    <input type="text" placeholder="Search..." aria-label="Search">
+                    <button type="submit" class="search-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+            <div class="user-controls">
+                <a href="/logout" class="logout-button">LOGOUT</a>
+                <div class="user-avatar">
+                    <img src="image/user-avatar.png" alt="User Avatar">
+                </div>
+            </div>
+        </header>
+        
+        <div class="content-container">
+            <!--Side Navigation Bar-->
+            <aside class="sidebar">
+                <div class="user-greeting">
+                    <p>Hey, Alfred Joshua!</p>
+                </div>
+                
+                <div class="user-profile">
+                    <div class="profile-icon">
+                        <img src="image/tree icon.svg" alt="Tree Icon">
+                    </div>
+                    <div class="xp-info">
+                        <p class="xp-label">Total XP</p>
+                        <p class="xp-value">0 XP</p>
+                    </div>
+                    <button class="plant-tree-button">PLANT TREE</button>
+                </div>
+                
+                <nav class="sidebar-navigation">
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li class="active"><a href="transparency.html">Transparency</a></li>
+                        <li><a href="visualization.html">Visualization</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            
+            <!--Main Content-->
+            <div class="main-content-wrapper">
+                <div class="gradient-bg">
+                    <div class="gradient-1"></div>
+                    <div class="gradient-2"></div>
+                </div>
+                
+                <main>
+                    <section class="transparency-reports section-reveal" id="transparency">
+                        <h2>Transparency Reports</h2>
+                        <!-- Transparency content would go here -->
+                    </section>
+                </main>
+            </div>
+        </div>
+
+        <script src="home.js"></script>
+    </body>
+</html>

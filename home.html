@@ -2,30 +2,23 @@
 <html lang="en">
     <head>
         <title>ChariTree</title>
-
-        <!--links-->
         <link rel="stylesheet" href="home.css">
         <link rel="icon" href="image/Charitree Logo.svg" type="image/charitree-icon">
-        
-        <!--meta part-->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  
         <meta name="description" content="ChariTree is an innovative donation platform that combines transparency, gamification, and environmental consciousness to revolutionize charitable giving.">
-        
-        <!--for sharing link format-->
         <meta property="og:title" content="ChariTree">
         <meta property="og:description" content="ChariTree is an innovative donation platform that combines transparency, gamification, and environmental consciousness to revolutionize charitable giving.">
         <meta property="og:image" content="https://yoursite.com/images/og-image.jpg">
         <meta property="og:url" content="https://yoursite.com/your-page">
         <meta property="og:type" content="website">
         <meta property="og:site_name" content="ChariTree">
-        
     </head>
     <body>
         <!--Main Header-->
         <header class="main-header">
             <div class="logo">
-                <a href="/">
+                <a href="home.html">
                     <img src="image/Charitree Logo.svg" alt="ChariTree Logo">
                     <span>ChariTree</span>
                 </a>
@@ -62,17 +55,17 @@
                     </div>
                     <div class="xp-info">
                         <p class="xp-label">Total XP</p>
-                        <p class="xp-value"><!--need to update the XP here every donation--> 0 XP</p>
+                        <p class="xp-value">0 XP</p>
                     </div>
                     <button class="plant-tree-button">PLANT TREE</button>
                 </div>
                 
                 <nav class="sidebar-navigation">
                     <ul>
-                        <li class="active"><a href="/">Home</a></li>
-                        <li><a href="/donate">Donate</a></li>
-                        <li><a href="/transparency">Transparency</a></li>
-                        <li><a href="/visualization">Visualization</a></li>
+                        <li class="active"><a href="home.html">Home</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="transparency.html">Transparency</a></li>
+                        <li><a href="visualization.html">Visualization</a></li>
                     </ul>
                 </nav>
             </aside>
@@ -87,7 +80,7 @@
                 
                 <main>
                     <!--Hero Section-->
-                    <section class="hero">
+                    <section class="hero" id="home">
                         <div class="hero-content">
                             <h1 class="hero-title">
                                 <span class="orange">Grow Change</span>
@@ -108,7 +101,7 @@
                     </section>
                     
                     <!--How it Works Section-->
-                    <section class="how-it-works section-reveal">
+                    <section class="how-it-works section-reveal" id="how-it-works">
                         <h2>How It Works</h2>
                         
                         <div class="process-cards">
@@ -130,7 +123,7 @@
                     </section>
                     
                     <!--Pointing System Section-->
-                    <section class="pointing-system section-reveal">
+                    <section class="pointing-system section-reveal" id="pointing-system">
                         <h2>Pointing System</h2>
                         
                         <div class="pointing-cards">
@@ -149,7 +142,7 @@
                     </section>
                     
                     <!--Charity Centers Section-->
-                    <section class="charity-centers section-reveal">
+                    <section class="charity-centers section-reveal" id="charity-centers">
                         <h2>Charity Centers</h2>
                         <p class="center-description">A verified directory of donation-ready organizations, sortable by location and needs, providing transparent profiles with current requirements and impact evidence.</p>
                         

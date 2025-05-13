@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ChariTree - Donate</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="icon" href="image/Charitree Logo.svg" type="image/charitree-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <a href="home.html">
+                <img src="image/Charitree Logo.svg" alt="ChariTree Logo">
+                <span>ChariTree</span>
+            </a>
+        </div>
+        <div class="search-bar">
+            <form action="/search" method="get">
+                <input type="text" placeholder="Search..." aria-label="Search">
+                <button type="submit" class="search-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </form>
+        </div>
+        <div class="user-controls">
+            <a href="/logout" class="logout-button">LOGOUT</a>
+            <div class="user-avatar">
+                <img src="image/user-avatar.png" alt="User Avatar">
+            </div>
+        </div>
+    </header>
+    
+    <div class="content-container">
+        <aside class="sidebar">
+            <div class="user-greeting">
+                <p>Hey, Alfred Joshua!</p>
+            </div>
+            <div class="user-profile">
+                <div class="profile-icon">
+                    <img src="image/tree icon.svg" alt="Tree Icon">
+                </div>
+                <div class="xp-info">
+                    <p class="xp-label">Total XP</p>
+                    <p class="xp-value">0 XP</p>
+                </div>
+                <button class="plant-tree-button">PLANT TREE</button>
+            </div>
+            <nav class="sidebar-navigation">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li class="active"><a href="donate.html">Donate</a></li>
+                    <li><a href="transparency.html">Transparency</a></li>
+                    <li><a href="visualization.html">Visualization</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <div class="main-content-wrapper">
+            <div class="gradient-bg">
+                <div class="gradient-1"></div>
+                <div class="gradient-2"></div>
+            </div>
+            
+            <main>
+                <section class="donation-section section-reveal">
+                    <h2 style="color: #FF9900; text-align: center; margin-bottom: 30px; font-size: 32px;">Make a Donation</h2>
+                    
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 40px;">
+                        <div style="flex: 1; margin: 0 15px; border: 1px solid #49F62A; border-radius: 10px; padding: 30px; text-align: center;">
+                            <h3 style="color: white; margin-bottom: 15px; font-size: 24px;">Monetary Donation</h3>
+                            <p style="color: #ddd; margin-bottom: 20px;">Support our cause with a financial contribution</p>
+                            <button style="background-color: #4CAF50; color: white; border: none; padding: 12px 30px; border-radius: 5px; cursor: pointer; font-size: 16px;">DONATE MONEY</button>
+                        </div>
+                        <div style="flex: 1; margin: 0 15px; border: 1px solid #49F62A; border-radius: 10px; padding: 30px; text-align: center;">
+                            <h3 style="color: white; margin-bottom: 15px; font-size: 24px;">Item Donation</h3>
+                            <p style="color: #ddd; margin-bottom: 20px;">Donate goods like food, clothes, or essentials</p>
+                            <button style="background-color: #4CAF50; color: white; border: none; padding: 12px 30px; border-radius: 5px; cursor: pointer; font-size: 16px;">DONATE ITEMS</button>
+                        </div>
+                    </div>
+                    
+                    <div style="border: 1px solid #49F62A; border-radius: 10px; padding: 30px; margin-bottom: 40px; background: rgba(0,0,0,0.3);">
+                        <h3 style="color: #FF9900; margin-bottom: 20px; text-align: center;">Donation Information</h3>
+                        <div style="display: flex; gap: 30px;">
+                            <div style="flex: 1;">
+                                <h4 style="color: white; margin-bottom: 15px;">Recent Donations</h4>
+                                <ul style="color: #ddd; list-style-type: none; padding: 0;">
+                                    <li style="margin-bottom: 10px; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 5px;">John D. donated ₱5,000</li>
+                                    <li style="margin-bottom: 10px; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 5px;">Sarah M. donated 10kg of clothes</li>
+                                    <li style="margin-bottom: 10px; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 5px;">Community Center donated 50 food packs</li>
+                                </ul>
+                            </div>
+                            <div style="flex: 1;">
+                                <h4 style="color: white; margin-bottom: 15px;">Impact Stats</h4>
+                                <ul style="color: #ddd; list-style-type: none; padding: 0;">
+                                    <li style="margin-bottom: 10px; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 5px;">₱100 = 500 XP</li>
+                                    <li style="margin-bottom: 10px; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 5px;">1kg items = 100 XP</li>
+                                    <li style="margin-bottom: 10px; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 5px;">5000 XP plants 1 tree</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="home.js"></script>
+</body>
+</html>
